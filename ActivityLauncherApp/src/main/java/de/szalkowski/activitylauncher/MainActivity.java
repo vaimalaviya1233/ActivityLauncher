@@ -21,7 +21,6 @@ public class MainActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setRetainInstance(true);
         setContentView(R.layout.activity_main);
 
         if (!getPreferences(Context.MODE_PRIVATE).getBoolean("disclaimer_accepted", false)) {
