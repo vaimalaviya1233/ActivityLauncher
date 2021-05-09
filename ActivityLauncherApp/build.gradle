@@ -17,7 +17,7 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             shrinkResources true
             zipAlignEnabled true
             signingConfig signingConfigs.release
@@ -28,7 +28,7 @@ android {
         debug {
             applicationIdSuffix '.debug'
             debuggable true
-            minifyEnabled false
+            minifyEnabled true
             multiDexEnabled true
             shrinkResources true
             zipAlignEnabled true
