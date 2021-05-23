@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,7 @@ public class AllTasksListAdapter extends BaseExpandableListAdapter implements Fi
     private final LayoutInflater inflater;
     private List<MyPackageInfo> packages;
     private List<MyPackageView> filtered;
+    String l = "package --> ";
 
     AllTasksListAdapter(Context context) {
         this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -32,6 +34,10 @@ public class AllTasksListAdapter extends BaseExpandableListAdapter implements Fi
     void resolve(AllTasksListAsyncProvider.Updater updater) {
         PackageManagerCache cache = PackageManagerCache.getPackageManagerCache(this.pm);
         List<PackageInfo> all_packages = this.pm.getInstalledPackages(0);
+        int o = 0;
+        for(PackageInfo p: all_packages) {
+            Log.i(l, p.packageName + " " + o++);
+        }
         this.packages = new ArrayList<>(all_packages.size());
         updater.updateMax(all_packages.size());
         updater.update(0);

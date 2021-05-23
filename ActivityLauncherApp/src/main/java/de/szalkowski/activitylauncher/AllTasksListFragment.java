@@ -26,6 +26,8 @@ import org.thirdparty.LauncherIconCreator;
 public class AllTasksListFragment extends Fragment implements AllTasksListAsyncProvider.Listener<AllTasksListAdapter>, Filterable {
     private ExpandableListView list;
 
+
+
     AllTasksListFragment() {
         super();
     }
@@ -33,6 +35,8 @@ public class AllTasksListFragment extends Fragment implements AllTasksListAsyncP
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
         View view = inflater.inflate(R.layout.fragment_all_list, container, false);
 
         this.list = view.findViewById(R.id.expandableListView1);
