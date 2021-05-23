@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "de.szalkowski.activitylauncher.release",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "versionCode": 19,
+      "versionName": "1.10.1.release",
+      "outputFile": "ActivityLauncherApp-release.apk"
+    }
+  ]
+}
