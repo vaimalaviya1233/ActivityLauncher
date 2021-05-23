@@ -8,12 +8,11 @@ android {
             keyPassword System.getenv("KEY_PASSWORD")
         }
     }
-    compileSdkVersion 29
+    compileSdkVersion 30
     defaultConfig {
         applicationId "de.szalkowski.activitylauncher"
         minSdkVersion 19
-        //noinspection OldTargetApi
-        targetSdkVersion 29
+        targetSdkVersion 30
     }
     buildTypes {
         release {
@@ -24,9 +23,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.txt'
             debuggable true
             versionNameSuffix '.release'
+            applicationIdSuffix '.release'
         }
         debug {
             applicationIdSuffix '.debug'
+            versionNameSuffix '.debug'
             debuggable true
             minifyEnabled true
             multiDexEnabled true
@@ -42,6 +43,6 @@ android {
 
 dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.fragment:fragment:1.3.3'
-    implementation 'com.google.android.material:material:1.4.0-alpha02'
+    implementation 'androidx.fragment:fragment:1.3.4'
+    implementation 'com.google.android.material:material:1.4.0-beta01'
 }
