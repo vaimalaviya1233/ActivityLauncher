@@ -14,7 +14,7 @@
         android:contentDescription="@string/label_icon"
         android:paddingStart="60dp"
         android:paddingEnd="0dp"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@mipmap/ic_launcher_round" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -25,8 +25,8 @@
         android:paddingEnd="0dp">
 
         <TextView
-            style="@style/innerText1"
             android:id="@android:id/text1"
+            style="@style/innerText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start|center_vertical"
@@ -34,8 +34,8 @@
             android:textIsSelectable="false" />
 
         <TextView
-            style="@style/innerText2"
             android:id="@android:id/text2"
+            style="@style/innerText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start|center_vertical"
