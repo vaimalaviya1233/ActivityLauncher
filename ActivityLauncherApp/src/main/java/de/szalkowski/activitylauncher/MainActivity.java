@@ -1,7 +1,9 @@
 package de.szalkowski.activitylauncher;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
@@ -18,10 +20,12 @@ public class MainActivity extends FragmentActivity {
 
     private Filterable filterTarget = null;
 
+    @SuppressLint("SourceLockedOrientationActivity")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//temporary to crash on change of orientation
 
         if (!getPreferences(Context.MODE_PRIVATE).getBoolean("disclaimer_accepted", false)) {
             DialogFragment dialog = new DisclaimerDialogFragment();
